@@ -2,30 +2,30 @@
 
 @include mat.core();
 
-$my-primary: mat.define-palette(mat.$mat-light-blue);
-$my-accent: mat.define-palette(mat.$mat-light-green);
-$my-warn: mat.define-palette(mat.$mat-red);
+$light-primary: mat.define-palette(mat.$indigo-palette);
+$light-accent: mat.define-palette(mat.$green-palette);
+$light-warn: mat.define-palette(mat.$red-palette);
 
-$my-theme: mat.define-light-theme((
+$light-theme: mat.define-light-theme((
   color: (
-    primary: $my-primary,
-    accent: $my-accent,
-    warn: $my-warn,
+    primary: $light-primary,
+    accent: $light-accent,
+    warn: $light-warn,
   )
 ));
-@include mat.all-component-themes($my-theme);
+@include mat.all-component-themes($light-theme);
 
 //for dark theme
-$my-primary-dark: mat.define-palette(mat.$mat-orange);
-$my-accent-dark: mat.define-palette(mat.$mat-yellow);
-$my-warn-dark: mat.define-palette(mat.$mat-red);
+$dark-primary: mat.define-palette(mat.$amber-palette);
+$dark-accent: mat.define-palette(mat.$blue-gray-palette);
+$dark-warn: mat.define-palette(mat.$red-palette);
 
-$my-theme-dark: mat.define-dark-theme((
+$dark-theme: mat.define-dark-theme((
   color: (
-    primary: $my-primary-dark,
-    accent: $my-accent-dark,
-    warn: $my-warn-dark,
+    primary: $dark-primary,
+    accent: $dark-accent,
+    warn: $dark-warn,
   )));
 .dark-theme-mode {
-  @include mat.angular-material-theme($my-theme-dark);
+  @include mat.all-component-themes($dark-theme);
 }
